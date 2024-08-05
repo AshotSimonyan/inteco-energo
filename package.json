@@ -1,0 +1,32 @@
+{
+  "name": "inteco-energo",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prettier": "prettier --write ."
+  },
+  "dependencies": {
+    "@formspree/react": "^2.5.1",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.2.0",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-countup": "^6.3.0",
+    "react-dom": "^18",
+    "react-modal-video": "^1.2.10",
+    "react-scroll": "^1.8.7",
+    "react-tabs": "^5.1.0",
+    "react-visibility-sensor": "^5.1.1",
+    "swiper": "^11.1.9",
+    "yet-another-react-lightbox": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "prettier": "2.8.8"
+  }
+}
