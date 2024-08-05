@@ -49,9 +49,9 @@ const Footer = () => {
                     {/* footer intro wrapper */}
                     <div className='footer-intro-wrapper'>
                       <div className='footer-logo'>
-                        <Link href='/home-one'>
+                        <Link href='/'>
                           <img
-                            src='/public/assets/img/logo/IntecoEnergo_white.png'
+                            src='/assets/img/logo/IntecoEnergo_white.png'
                             className='img-fluid'
                             alt=''
                           />

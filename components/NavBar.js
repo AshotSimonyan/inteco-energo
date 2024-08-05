@@ -58,7 +58,7 @@ const NavBar = () => {
                     <div className='logo'>
                       <Link href='/'>
                         <img
-                          src='/public/assets/img/logo/IntecoEnergo.png'
+                          src='/assets/img/logo/IntecoEnergo.png'
                           className='img-fluid'
                           alt='Logo'
                         />

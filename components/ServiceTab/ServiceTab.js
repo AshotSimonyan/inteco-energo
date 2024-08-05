@@ -1,5 +1,4 @@
 import React from 'react';
-import { serviceData } from '@/components/ServiceTab/ServiceTabData';
 
 const ServiceTabs = ({ serviceDetails }) => {
   console.log(serviceDetails);

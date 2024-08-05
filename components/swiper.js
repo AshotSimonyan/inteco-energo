@@ -59,4 +59,6 @@ const SwiperSlider = forwardRef(({ options, children, navClass }, ref) => {
 
 export { SwiperSlide };
 
+SwiperSlider.displayName = 'SwiperSlider';
+
 export default SwiperSlider;

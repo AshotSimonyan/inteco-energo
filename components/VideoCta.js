@@ -1,15 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import ModalVideo from 'react-modal-video';
 import Link from 'next/link';
 
 const VideoCta = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openModal = () => {
-    setIsOpen(true);
-  };
-
   return (
     <div>
       {/*====================  video cta area ====================*/}
@@ -35,18 +28,8 @@ const VideoCta = () => {
             <div className='col-lg-5 offset-lg-1 col-md-6'>
               <div className='cta-video-image'>
                 <div className='video-popup'>
-                  <ModalVideo
-                    channel='youtube'
-                    isOpen={isOpen}
-                    videoId='OrS-93U4AYQ'
-                    onClose={() => setIsOpen(false)}
-                  />
                   <div className='cta-video-image__image'>
-                    <img
-                      src='/public/assets/img/backgrounds/video-cta.jpg'
-                      className='img-fluid'
-                      alt=''
-                    />
+                    <img src='/assets/img/backgrounds/video-cta.jpg' className='img-fluid' alt='' />
                   </div>
                 </div>
               </div>

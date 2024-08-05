@@ -1,7 +1,6 @@
 'use client';
 import Link from 'next/link';
 import { useForm } from '@formspree/react';
-import { useEffect } from 'react';
 
 const FieldErrorCodeEnum = {
   REQUIRED_FIELD_EMPTY: 'REQUIRED_FIELD_EMPTY',

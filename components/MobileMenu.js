@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useEffect, forwardRef, useImperativeHandle } from 'react';
 import Link from 'next/link';
+import SwiperSlider from '@/components/swiper';
 
 const MobileMenu = forwardRef((props, ref) => {
   const [active, setActive] = useState(false);
@@ -118,5 +119,6 @@ const MobileMenu = forwardRef((props, ref) => {
     </div>
   );
 });
+MobileMenu.displayName = 'MobileMenu';
 
 export default MobileMenu;

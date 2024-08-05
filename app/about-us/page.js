@@ -1,5 +1,4 @@
 'use client';
-import { useState } from 'react';
 import Link from 'next/link';
 import AboutText from '@/components/AboutText';
 
@@ -38,12 +37,12 @@ const About = () => {
           <div className='about-wrapper row'>
             <div className='col-sm-6 col-12 order-1 order-lg-2'>
               <div className='about-image about-image-1'>
-                <img src='/public/assets/img/about/about-1.jpg' alt='' />
+                <img src='/assets/img/about/about-1.jpg' alt='' />
               </div>
             </div>
             <div className='col-sm-6 col-12 order-2 order-lg-3'>
               <div className='about-image about-image-2'>
-                <img src='/public/assets/img/about/about-2.jpg' alt='' />
+                <img src='/assets/img/about/about-2.jpg' alt='' />
               </div>
             </div>
             <div className='col-lg-6 col-12 order-3 order-lg-1'>
