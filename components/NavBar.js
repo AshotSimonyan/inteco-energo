@@ -71,7 +71,7 @@ const NavBar = () => {
                           <i className='zmdi zmdi-smartphone-android' />
                         </div>
                         <div className='header-info-single-item__content'>
-                          <h6 className='header-info-single-item__title'>Հեռախո</h6>
+                          <h6 className='header-info-single-item__title'>Հեռախոս</h6>
                           <p className='header-info-single-item__subtitle'>
                             <a href='tel:+37444001496'>+374 44 001 496</a>
                           </p>

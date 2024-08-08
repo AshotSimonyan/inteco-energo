@@ -89,8 +89,6 @@ const About = () => {
         </div>
       </div>
       {/*About section end*/}
-
-      <AboutText />
     </div>
   );
 };

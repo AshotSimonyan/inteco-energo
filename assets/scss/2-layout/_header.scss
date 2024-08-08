@@ -392,7 +392,11 @@
   padding-right: 30px;
   a {
     img {
-      max-width: 190px;
+      max-width: 300px;
+
+      @media #{$large-mobile} {
+        max-width: 200px;
+      }
     }
   }
 }

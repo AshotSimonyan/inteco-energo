@@ -2,6 +2,7 @@ import HeroSliderOne from '@/components/HeroSliderOne';
 import ServiceGridSlider from '@/components/ServiceGridSlider';
 import VideoCta from '@/components/VideoCta';
 import FeatureIcon from '@/components/FeatureIcon';
+import AboutText from '@/components/AboutText';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
 
       {/* Feature Icon */}
       <FeatureIcon />
+      <AboutText />
     </div>
   );
 };

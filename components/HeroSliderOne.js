@@ -9,7 +9,7 @@ const HeroSliderOne = () => {
       <div className='hero-slider-area'>
         <div
           className='hero-slider__single-item'
-          style={{ backgroundImage: `url(/assets/img/slider/slider1.jpg)` }}
+          style={{ backgroundImage: `url(/assets/img/slider/banner.png)` }}
         >
           <div className='hero-slider__content-wrapper'>
             <div className='container'>
