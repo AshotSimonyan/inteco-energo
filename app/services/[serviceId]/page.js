@@ -16,7 +16,7 @@ const Page = ({ params }) => {
       <div
         className='breadcrumb-area breadcrumb-bg'
         style={{
-          backgroundImage: `url(/assets/img/backgrounds/funfact-bg.jpg)`,
+          backgroundImage: `url(/assets/img/backgrounds/service-bg.jpg)`,
         }}
       >
         <div className='container'>

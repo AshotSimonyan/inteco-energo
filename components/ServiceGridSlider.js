@@ -35,14 +35,14 @@ const ServiceGridSlider = () => {
       serviceId: 1,
     },
     {
-      img: 'service3.jpg',
+      img: 'service2.jpg',
       iconName: 'flaticon-010-tank-1',
       serviceTitle: 'Էլեկտրաֆիկացում',
       serviceExcerpt: 'Էլեկտրամատակարարման համակարգը հուսալի, անվտանգ և երկարատև է։',
       serviceId: 2,
     },
     {
-      img: 'service2.jpg',
+      img: 'service3.jpg',
       iconName: 'flaticon-002-welding',
       serviceTitle: 'Մալուխային աշխատանքներ',
       serviceExcerpt: 'Ընկերությունն ունի հարուստ փորձ մալուխային աշխատանքներում։',

@@ -10,7 +10,7 @@ const About = () => {
       <div
         className='breadcrumb-area breadcrumb-bg'
         style={{
-          backgroundImage: `url(/assets/img/backgrounds/funfact-bg.jpg)`,
+          backgroundImage: `url(/assets/img/backgrounds/about.jpg)`,
         }}
       >
         <div className='container'>

@@ -38,7 +38,7 @@ const Contact = () => {
       <div
         className='breadcrumb-area breadcrumb-bg'
         style={{
-          backgroundImage: `url(assets/img/backgrounds/funfact-bg.jpg)`,
+          backgroundImage: `url(/assets/img/backgrounds/contact-bg.jpg)`,
         }}
       >
         <div className='container'>

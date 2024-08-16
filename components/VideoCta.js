@@ -30,7 +30,7 @@ const VideoCta = () => {
               <div className='cta-video-image'>
                 <div className='video-popup'>
                   <div className='cta-video-image__image'>
-                    <img src='/assets/img/backgrounds/video-cta.jpg' className='img-fluid' alt='' />
+                    <img src='/assets/img/backgrounds/about-bg.jpg' className='img-fluid' alt='' />
                   </div>
                 </div>
               </div>
