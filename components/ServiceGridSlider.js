@@ -30,7 +30,7 @@ const ServiceGridSlider = () => {
     {
       img: 'service1.jpg',
       iconName: 'flaticon-015-cart',
-      serviceTitle: 'Ենթակայանների աշխատանքներ',
+      serviceTitle: 'Ենթակայանների կառուցում',
       serviceExcerpt: 'Էլեկտրական ցանցերը կարևոր են արդյունաբերության և կապի համար։',
       serviceId: 1,
     },
