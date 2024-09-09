@@ -2,8 +2,11 @@
 import React from 'react';
 import SwiperSlider, { SwiperSlide } from './swiper';
 import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
 
 const ServiceGridSlider = () => {
+  const t = useTranslations('homepage.services'); // 'homepage.services' refers to the translation key
+  const locale = useLocale(); // Get the current locale
   const params = {
     slidesPerView: 3,
     loop: true,
@@ -12,7 +15,6 @@ const ServiceGridSlider = () => {
       delay: 3000,
       disableOnInteraction: false,
     },
-    // Responsive breakpoints
     breakpoints: {
       300: {
         slidesPerView: 1,
@@ -26,29 +28,7 @@ const ServiceGridSlider = () => {
     },
   };
 
-  const data = [
-    {
-      img: 'service1.jpg',
-      iconName: 'flaticon-015-cart',
-      serviceTitle: 'Ենթակայանների կառուցում',
-      serviceExcerpt: 'Էլեկտրական ցանցերը կարևոր են արդյունաբերության և կապի համար։',
-      serviceId: 1,
-    },
-    {
-      img: 'service2.jpg',
-      iconName: 'flaticon-010-tank-1',
-      serviceTitle: 'Էլեկտրաֆիկացում',
-      serviceExcerpt: 'Էլեկտրամատակարարման համակարգը հուսալի, անվտանգ և երկարատև է։',
-      serviceId: 2,
-    },
-    {
-      img: 'service3.jpg',
-      iconName: 'flaticon-002-welding',
-      serviceTitle: 'Մալուխային աշխատանքներ',
-      serviceExcerpt: 'Ընկերությունն ունի հարուստ փորձ մալուխային աշխատանքներում։',
-      serviceId: 3,
-    },
-  ];
+  const data = t.raw('serviceList'); // Retrieve service list data
 
   const DataList = data.map((val, i) => (
     <SwiperSlide key={i}>
@@ -56,7 +36,7 @@ const ServiceGridSlider = () => {
         <div className='service-grid-item'>
           <div className='service-grid-item__image'>
             <div className='service-grid-item__image-wrapper'>
-              <Link href={`/services/${val.serviceId}`}>
+              <Link href={`/${locale}/services/${val.serviceId}`}>
                 <img src={`/assets/img/service/${val.img}`} className='img-fluid' alt='' />
               </Link>
             </div>
@@ -66,11 +46,11 @@ const ServiceGridSlider = () => {
           </div>
           <div className='service-grid-item__content'>
             <h3 className='title'>
-              <Link href={`/${val.serviceId}`}>{val.serviceTitle}</Link>
+              <Link href={`/${locale}/services/${val.serviceId}`}>{val.serviceTitle}</Link>
             </h3>
             <p className='subtitle'>{val.serviceExcerpt}</p>
-            <Link href={`/services/${val.serviceId}`} className='see-more-link'>
-              ՏԵՍՆԵԼ ԱՎԵԼԻՆ
+            <Link href={`/${locale}/services/${val.serviceId}`} className='see-more-link'>
+              {t('seeMore')}
             </Link>
           </div>
         </div>
@@ -80,14 +60,13 @@ const ServiceGridSlider = () => {
 
   return (
     <div>
-      {/*====================  service grid slider area ====================*/}
       <div className='service-grid-slider-area section-space--inner--120'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-12'>
               <div className='section-title-area text-center'>
                 <h2 className='section-title section-space--bottom--50'>
-                  ՄԵՐ ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐԸ <span className='title-icon' />
+                  {t('title')} <span className='title-icon' />
                 </h2>
               </div>
             </div>
@@ -99,7 +78,6 @@ const ServiceGridSlider = () => {
           </div>
         </div>
       </div>
-      {/*====================  End of service grid slider area  ====================*/}
     </div>
   );
 };

@@ -1,8 +1,12 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
 
 const HeroSliderOne = () => {
+  const t = useTranslations('homepage.slider'); // Assuming the translations are under 'homepage.slider'
+  const locale = useLocale(); // Get the current locale
+
   return (
     <div>
       {/*====================  hero slider area ====================*/}
@@ -16,9 +20,9 @@ const HeroSliderOne = () => {
               <div className='row'>
                 <div className='col-lg-12'>
                   <div className='hero-slider__content'>
-                    <h2 className='hero-slider__title'>Հուսալի Էներգիա՝ Ձեր ապագայի համար</h2>
-                    <Link href='/contact-us' className='hero-slider__btn'>
-                      Կապ մեզ հետ
+                    <h2 className='hero-slider__title'>{t('title')}</h2>
+                    <Link href={`/${locale}/contact-us`} className='hero-slider__btn'>
+                      {t('contactButton')}
                     </Link>
                   </div>
                 </div>

@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "title": "T-Construction LLC - Construction and Electrification Services in Armenia",
+    "description": "T-Construction LLC offers leading construction, electrification, and paving services in Armenia, ensuring quality, reliability, and safety."
+  },
+
+  "header": {
+    "nav": {
+      "home": "HOME",
+      "about": "ABOUT US",
+      "services": "SERVICES",
+      "contact": "CONTACT"
+    },
+    "phone": "Phone",
+    "address": {
+      "label": "Address",
+      "value": "8 Vahram Papazyan St."
+    },
+    "emailLabel": "Email"
+  },
+
+  "footer": {
+    "nav": {
+      "home": "HOME",
+      "services": "SERVICES",
+      "contact": "CONTACT",
+      "about": "ABOUT US"
+    },
+    "description": "Inteco Energo CJSC is a leading construction company providing reliable and high-quality energy solutions.",
+    "usefulLinks": "Useful Links",
+    "contactUs": "Contact Us",
+    "addressLabel": "Address",
+    "address": "8 Vahram Papazyan St.",
+    "phoneLabel": "Phone",
+    "phone": "+374 44 001 496",
+    "emailLabel": "Email",
+    "email": "info@intecoenergo.am",
+    "copyright": "Inteco Energo",
+    "year": "{year} Year"
+  },
+
+  "homepage": {
+    "slider": {
+      "title": "Reliable Energy for Your Future",
+      "contactButton": "Contact Us"
+    },
+    "services": {
+      "title": "OUR SERVICES",
+      "seeMore": "SEE MORE",
+      "serviceList": [
+        {
+          "serviceTitle": "Substation Construction",
+          "serviceExcerpt": "Electric networks are vital for industry and communications.",
+          "img": "service1.jpg",
+          "iconName": "flaticon-015-cart",
+          "serviceId": 1
+        },
+        {
+          "serviceTitle": "Electrification",
+          "serviceExcerpt": "The power supply system is reliable, safe, and long-lasting.",
+          "img": "service2.jpg",
+          "iconName": "flaticon-010-tank-1",
+          "serviceId": 2
+        },
+        {
+          "serviceTitle": "Cable Works",
+          "serviceExcerpt": "The company has extensive experience in cable works.",
+          "img": "service3.jpg",
+          "iconName": "flaticon-002-welding",
+          "serviceId": 3
+        }
+      ]
+    },
+    "videoCta": {
+      "smallTitle": "About Us",
+      "title": "One of Armenia's Largest Construction Companies",
+      "text": "Inteco Energo CJSC, founded in 2017, is one of Armenia's leading construction companies, carrying out diverse construction work in residential, public, and energy sectors, and is a key contractor for the Armenian Electrical Networks.",
+      "seeMore": "SEE MORE"
+    },
+    "featureList": [
+      {
+        "featureIcon": "feature-2.png",
+        "featureTitle": "Quality",
+        "featureDescription": "We strive to deliver high-quality in all our services."
+      },
+      {
+        "featureIcon": "feature-1.png",
+        "featureTitle": "Reliability",
+        "featureDescription": "Customer trust is our top priority."
+      },
+      {
+        "featureIcon": "feature-3.png",
+        "featureTitle": "Safety",
+        "featureDescription": "We ensure top-level safety in all our projects and services."
+      }
+    ],
+    "about": {
+      "title": "Completed Projects",
+      "projectList": [
+        "Renovation works on transformer and distribution substations",
+        "Cable construction works near the main avenue in Yerevan",
+        "Reconstruction of BE-120 substation located in Hrazdan Gorge, Yerevan",
+        "Reconstruction of the Gyumri 3 substation 110/35/10 kV",
+        "Cable laying works for the 6 kV line from Tsitsernakaberd ES to the city center, Yerevan",
+        "Reconstruction of the Kotayk substation 110/6 kV",
+        "Reconstruction of the Avan substation 110/6 kV",
+        "Reconstruction of the Aresh-2 substation 110/35/10 kV",
+        "Reconstruction of the Mashtots substation 110 kV",
+        "Reconstruction of electrical networks in the entrances of residential buildings",
+        "Installation of 6 kV cables for the new BE power supply line on Monte Melkonyan St. (left side) from the Tsitsernakaberd ES, Yerevan",
+        "Installation of 6 kV cables for the new BE power supply line on Monte Melkonyan St. (right side) and connection between left and right BE, Yerevan",
+        "Construction of a new distribution substation on the territory owned by Park Group LLC at Monte Melkonyan St. 31, Yerevan"
+      ]
+    }
+  },
+
+  "aboutPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "about": "About Us"
+    },
+    "sections": {
+      "aboutUs": {
+        "title": "About Us",
+        "content": "Inteco Energo CJSC was founded in March 2017 and is one of the largest construction companies in Armenia. We carry out diverse construction projects in residential, public, and energy sectors. Being a key contractor for the Armenian Electrical Networks, we have carried out large-scale construction, reconstruction, and modernization of energy infrastructure in Armenia and Artsakh."
+      },
+      "mission": {
+        "title": "Our Mission",
+        "list": [
+          {
+            "strong": "Reliable Power Supply.",
+            "content": "We are committed to providing reliable and uninterrupted power supply to our clients."
+          },
+          {
+            "strong": "Higher Stability.",
+            "content": "Our projects contribute to increasing the stability of the energy system."
+          },
+          {
+            "strong": "Reducing Energy Losses.",
+            "content": "We reduce energy losses by using the most advanced technologies."
+          }
+        ]
+      }
+    },
+    "contactButton": "Contact Us"
+  },
+  "contactPage": {
+    "breadcrumb": {
+      "home": "Home",
+      "contact": "Contact"
+    },
+    "contactDetails": {
+      "title": "Contact Details",
+      "address": "8 Vahram Papazyan St.",
+      "phone": "Phone",
+      "email": "Email",
+      "leaveMessage": "Leave Your Message",
+      "submitButton": "Submit",
+      "successMessage": "Thank you, your message has been successfully sent!",
+      "retryButton": "Fill Again"
+    },
+    "errors": {
+      "REQUIRED_FIELD_EMPTY": "This field is required",
+      "REQUIRED_FIELD_MISSING": "This field is missing",
+      "STRIPE_CLIENT_ERROR": "Stripe client error",
+      "STRIPE_SCA_ERROR": "Stripe SCA error",
+      "TYPE_EMAIL": "Please enter a valid email address",
+      "TYPE_NUMERIC": "Please enter a number",
+      "TYPE_TEXT": "Please enter text",
+      "GENERIC_ERROR": "An error occurred"
+    }
+  },
+
+  "servicePage": {
+    "breadcrumb": {
+      "home": "Home",
+      "services": "Services"
+    },
+    "serviceData": {
+      "1": {
+        "img": "service1.jpg",
+        "title": "Construction, Reconstruction, and Repair of Transmission Substations",
+        "description": "Electric networks and power supply are the basis for the industrial sector of telecommunications operators and service companies. Inteco Energo CJSC has earned a reputation in the market as a reliable partner and supplier of cutting-edge energy technologies through its systematic approach to the construction of high and low-voltage electrical networks, optical grounding wires, and transmission lines, as well as the supply and installation of transformer substations and alternative energy systems."
+      },
+      "2": {
+        "img": "service2.jpg",
+        "title": "Electrification",
+        "description": "The key characteristics of the power supply system are longevity, reliability, and safety. All electrical installation work is carried out according to high-quality standards, using cables and equipment from trusted and well-known manufacturers. The construction of substations and cable lines of 0.22 kV, 0.4 kV, 6 kV, 10 kV, 35 kV, and 110 kV is carried out."
+      },
+      "3": {
+        "img": "service3.jpg",
+        "title": "Overhead and Underground Cable Works",
+        "description": "Throughout its many years of operation, the company has gained extensive experience in performing overhead and underground cable works. The company’s main advantage lies in its highly qualified, certified, and experienced engineers and specialists. The company offers a full range of services, including the design of general networks, power transmission and distribution lines, obtaining all necessary permits, licenses, project and planning documentation, supply of cables and materials, and installation work."
+      }
+    },
+    "sidebar": {
+      "title": "Services",
+      "serviceList": [
+        {
+          "img": "service1.jpg",
+          "iconName": "flaticon-015-cart",
+          "serviceTitle": "Substation Construction",
+          "serviceExcerpt": "Electric networks are vital for industry and communications.",
+          "serviceId": 1
+        },
+        {
+          "img": "service2.jpg",
+          "iconName": "flaticon-010-tank-1",
+          "serviceTitle": "Electrification",
+          "serviceExcerpt": "The power supply system is reliable, safe, and long-lasting.",
+          "serviceId": 2
+        },
+        {
+          "img": "service3.jpg",
+          "iconName": "flaticon-002-welding",
+          "serviceTitle": "Cable Works",
+          "serviceExcerpt": "The company has extensive experience in cable works.",
+          "serviceId": 3
+        }
+      ]
+    }
+  }
+}

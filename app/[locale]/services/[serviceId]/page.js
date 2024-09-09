@@ -1,17 +1,21 @@
+'use client';
 import Link from 'next/link';
 import Sidebar from '@/components/Sidebar';
 import React from 'react';
 import ServiceTab from '@/components/ServiceTab/ServiceTab';
-import { serviceData } from '@/components/ServiceTab/ServiceTabData';
+import { useTranslations, useLocale } from 'next-intl';
 
-const Page = ({ params }) => {
+const ServicePage = ({ params }) => {
   const serviceId = +params.serviceId;
+  const t = useTranslations('servicePage');
+  const lang = useLocale();
 
-  const serviceDetails = serviceData[serviceId];
+  // Accessing the service data and sidebar from translations
+  const serviceDetails = t.raw(`serviceData.${serviceId}`);
+  const sidebarData = t.raw('sidebar');
 
   return (
     <div>
-      {/* breadcrumb */}
       {/*====================  breadcrumb area ====================*/}
       <div
         className='breadcrumb-area breadcrumb-bg'
@@ -23,12 +27,12 @@ const Page = ({ params }) => {
           <div className='row'>
             <div className='col'>
               <div className='page-banner text-center'>
-                <h1>Ծառայութույուններ</h1>
+                <h1>{t('breadcrumb.services')}</h1>
                 <ul className='page-breadcrumb'>
                   <li>
-                    <Link href='/'>Գլխավոր</Link>
+                    <Link href={`/${lang}`}>{t('breadcrumb.home')}</Link>
                   </li>
-                  <li>Ծառայութույուններ</li>
+                  <li>{t('breadcrumb.services')}</li>
                 </ul>
               </div>
             </div>
@@ -46,7 +50,7 @@ const Page = ({ params }) => {
                 <ServiceTab serviceDetails={serviceDetails} />
               </div>
               <div className='col-lg-4 col-12 order-2 order-lg-1'>
-                <Sidebar serviceId={serviceId} />
+                <Sidebar sidebarData={sidebarData} currentServiceId={serviceId} />
               </div>
             </div>
           </div>
@@ -57,4 +61,4 @@ const Page = ({ params }) => {
   );
 };
 
-export default Page;
+export default ServicePage;

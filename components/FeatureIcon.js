@@ -1,24 +1,11 @@
+'use client';
+
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 const FeatureIcon = ({ background }) => {
-  const data = [
-    {
-      featureIcon: 'feature-2.png',
-      featureTitle: 'Որակ',
-      featureDescription: 'Մենք ձգտում ենք ապահովել բարձր որակ բոլոր մեր ծառայություններում:',
-    },
-    {
-      featureIcon: 'feature-1.png',
-      featureTitle: 'Հուսալիություն',
-      featureDescription: 'Հաճախորդների վստահությունը մեր առաջնահերթությունն է:',
-    },
-    {
-      featureIcon: 'feature-3.png',
-      featureTitle: 'Անվտանգություն',
-      featureDescription:
-        'Ապահովում ենք բարձր մակարդակի անվտանգություն մեր բոլոր նախագծերում և ծառայություններում:',
-    },
-  ];
+  const t = useTranslations('homepage');
+  const data = t.raw('featureList'); // Access the translated data for featureList
 
   const Datalist = data.map((val, i) => (
     <div className='col-lg-4 col-md-6 col-12 section-space--bottom--30' key={i}>

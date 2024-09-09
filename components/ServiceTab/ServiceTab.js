@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ServiceTabs = ({ serviceDetails }) => {
-  console.log(serviceDetails);
   return (
     <div className='service-details'>
       <div className='item'>

@@ -606,6 +606,14 @@
     justify-content: center;
     .header-navigation__nav {
       padding: 0;
+      position: relative;
+
+      .languages {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
       nav {
         & > ul {
           & > li {
@@ -1155,6 +1163,14 @@
 
   @media #{$extra-small-mobile} {
     padding: 70px 25px 0;
+  }
+
+  .languages {
+    button {
+      color: #111;
+      font-weight: 600;
+    }
+
   }
 }
 

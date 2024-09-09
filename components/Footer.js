@@ -2,11 +2,16 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { animateScroll as scroll } from 'react-scroll';
+import { useTranslations, useLocale } from 'next-intl';
 
 const Footer = () => {
   const [scrollY, setScrollY] = useState(0);
   const [top, setTop] = useState(0);
   const [height, setHeight] = useState(0);
+
+  const t = useTranslations('footer'); // Use 'footer' translation
+  const nav = t.raw('nav'); // Get navigation links
+  const lang = useLocale(); // Get the current language/locale
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,7 +54,7 @@ const Footer = () => {
                     {/* footer intro wrapper */}
                     <div className='footer-intro-wrapper'>
                       <div className='footer-logo'>
-                        <Link href='/'>
+                        <Link href={`/${lang}`}>
                           <img
                             src='/assets/img/logo/IntecoEnergo_white.png'
                             className='img-fluid'
@@ -57,28 +62,25 @@ const Footer = () => {
                           />
                         </Link>
                       </div>
-                      <div className='footer-desc'>
-                        «Ինտեկո Էներգո» ՓԲԸ՝ առաջատար շինարարական ընկերություն, որակյալ և հուսալի
-                        էներգետիկ լուծումներով։
-                      </div>
+                      <div className='footer-desc'>{t('description')}</div>
                     </div>
                   </div>
                   <div className='col-xl-3 offset-xl-2 offset-lg-2 col-lg-3 col-md-4'>
                     {/* footer widget */}
                     <div className='footer-widget'>
-                      <h4 className='footer-widget__title'>Օգտակար Հղումներ</h4>
+                      <h4 className='footer-widget__title'>{t('usefulLinks')}</h4>
                       <ul className='footer-widget__navigation'>
                         <li>
-                          <Link href='/'>ԳԼԽԱՎՈՐ</Link>
+                          <Link href={`/${lang}`}>{nav.home}</Link>
                         </li>
                         <li>
-                          <Link href='/about-us'>ՄԵՐ ՄԱՍԻՆ</Link>
+                          <Link href={`/${lang}/about-us`}>{nav.about}</Link>
                         </li>
                         <li>
-                          <Link href='/services'>ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ</Link>
+                          <Link href={`/${lang}/services`}>{nav.services}</Link>
                         </li>
                         <li>
-                          <Link href='/contact-us'>ՀԵՏԱԴԱՐՁ ԿԱՊ</Link>{' '}
+                          <Link href={`/${lang}/contact-us`}>{nav.contact}</Link>
                         </li>
                       </ul>
                     </div>
@@ -86,20 +88,20 @@ const Footer = () => {
                   <div className='col-xl-3 offset-xl-1 col-lg-3 col-md-4'>
                     {/* footer widget */}
                     <div className='footer-widget mb-0'>
-                      <h4 className='footer-widget__title'>Կապ Մեզ Հետ</h4>
+                      <h4 className='footer-widget__title'>{t('contactUs')}</h4>
                       <div className='footer-widget__content'>
                         <ul className='contact-details'>
                           <li>
-                            <span>Հասցե:</span>Վահրամ Փափազյան 8
+                            <span>{t('addressLabel')}:</span> {t('address')}
                           </li>
                           <li>
                             <a href='tel:+37444001496'>
-                              <span>հեռախոս:</span>+374 44 001 496
+                              <span>{t('phoneLabel')}:</span> {t('phone')}
                             </a>
                           </li>
                           <li>
                             <a href='mailto:info@intecoenergo.am'>
-                              <span>Էլ. հասցե:</span>info@intecoenergo.am
+                              <span>{t('emailLabel')}:</span> {t('email')}
                             </a>
                           </li>
                         </ul>
@@ -113,7 +115,9 @@ const Footer = () => {
         </div>
         <div className='footer-copyright-wrapper'>
           <div className='footer-copyright text-center'>
-            <p className='copyright-text'>&copy; Ինտեկո Էներգո {new Date().getFullYear()}</p>
+            <p className='copyright-text'>
+              &copy; {t('copyright')} {new Date().getFullYear()}
+            </p>
           </div>
         </div>
       </div>

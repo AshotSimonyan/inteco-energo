@@ -2,12 +2,21 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import MobileMenu from './MobileMenu';
+import { useLocale, useTranslations } from 'next-intl';
+import LanguagePicker from '@/components/Language/Language';
 
 const NavBar = () => {
   const [scroll, setScroll] = useState(0);
   const [top, setTop] = useState(0);
   const [height, setHeight] = useState(0);
   const mobileMenuElement = useRef(null);
+
+  const lang = useLocale();
+  const t = useTranslations('header');
+  const nav = t.raw('nav');
+  const phoneLabel = t('phone');
+  const addressLabel = t('address.label');
+  const addressValue = t('address.value');
 
   const activeMobileMenu = () => {
     if (mobileMenuElement.current) {
@@ -56,7 +65,7 @@ const NavBar = () => {
                   <div className='header-info-wrapper align-items-center'>
                     {/* logo */}
                     <div className='logo'>
-                      <Link href='/'>
+                      <Link href={`/${lang}`}>
                         <img
                           src='/assets/img/logo/IntecoEnergo.png'
                           className='img-fluid'
@@ -71,7 +80,7 @@ const NavBar = () => {
                           <i className='zmdi zmdi-smartphone-android' />
                         </div>
                         <div className='header-info-single-item__content'>
-                          <h6 className='header-info-single-item__title'>Հեռախոս</h6>
+                          <h6 className='header-info-single-item__title'>{phoneLabel}</h6>
                           <p className='header-info-single-item__subtitle'>
                             <a href='tel:+37444001496'>+374 44 001 496</a>
                           </p>
@@ -82,8 +91,8 @@ const NavBar = () => {
                           <i className='zmdi zmdi-home' />
                         </div>
                         <div className='header-info-single-item__content'>
-                          <h6 className='header-info-single-item__title'>Հասցե</h6>
-                          <p className='header-info-single-item__subtitle'>Վահրամ Փափազյան 8</p>
+                          <h6 className='header-info-single-item__title'>{addressLabel}</h6>
+                          <p className='header-info-single-item__subtitle'>{addressValue}</p>
                         </div>
                       </div>
                     </div>
@@ -112,19 +121,20 @@ const NavBar = () => {
                       <nav>
                         <ul>
                           <li>
-                            <Link href='/'>ԳԼԽԱՎՈՐ</Link>
+                            <Link href={`/${lang}`}>{nav.home}</Link>
                           </li>
                           <li>
-                            <Link href='/about-us'>ՄԵՐ ՄԱՍԻՆ</Link>
+                            <Link href={`/${lang}/about-us`}>{nav.about}</Link>
                           </li>
                           <li>
-                            <Link href='/services/1'>ԾԱՌԱՅՈՒԹՅՈՒՆՆԵՐ</Link>
+                            <Link href={`/${lang}/services/1`}>{nav.services}</Link>
                           </li>
                           <li>
-                            <Link href='/contact-us'>ՀԵՏԱԴԱՐՁ ԿԱՊ</Link>{' '}
+                            <Link href={`/${lang}/contact-us`}>{nav.contact}</Link>{' '}
                           </li>
                         </ul>
                       </nav>
+                      <LanguagePicker />
                     </div>
                   </div>
                 </div>

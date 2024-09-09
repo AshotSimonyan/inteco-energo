@@ -1,40 +1,24 @@
 'use client';
 import Link from 'next/link';
 import { useForm } from '@formspree/react';
+import { useTranslations, useLocale } from 'next-intl';
 
-const FieldErrorCodeEnum = {
-  REQUIRED_FIELD_EMPTY: 'REQUIRED_FIELD_EMPTY',
-  REQUIRED_FIELD_MISSING: 'REQUIRED_FIELD_MISSING',
-  STRIPE_CLIENT_ERROR: 'STRIPE_CLIENT_ERROR',
-  STRIPE_SCA_ERROR: 'STRIPE_SCA_ERROR',
-  TYPE_EMAIL: 'TYPE_EMAIL',
-  TYPE_NUMERIC: 'TYPE_NUMERIC',
-  TYPE_TEXT: 'TYPE_TEXT',
-};
-
-// Armenian translations for error messages
-const errorMessages = {
-  [FieldErrorCodeEnum.REQUIRED_FIELD_EMPTY]: 'Դաշտը պարտադիր է',
-  [FieldErrorCodeEnum.REQUIRED_FIELD_MISSING]: 'Դաշտը բացակայում է',
-  [FieldErrorCodeEnum.STRIPE_CLIENT_ERROR]: 'STRIPE հաճախորդի սխալ',
-  [FieldErrorCodeEnum.STRIPE_SCA_ERROR]: 'STRIPE SCA սխալ',
-  [FieldErrorCodeEnum.TYPE_EMAIL]: 'Մուտքագրեք վավեր էլ. հասցե',
-  [FieldErrorCodeEnum.TYPE_NUMERIC]: 'Մուտքագրեք թիվ',
-  [FieldErrorCodeEnum.TYPE_TEXT]: 'Մուտքագրեք տեքստ',
-};
-
-// Function to get the appropriate Armenian message
-const getErrorMessage = (error) => {
-  return errorMessages[error.code] || 'Սխալ է տեղի ունեցել։';
-};
 const Contact = () => {
   const [state, handleSubmit, reset] = useForm('myzgwvnj');
+  const t = useTranslations('contactPage'); // Use translations from contactPage namespace
+  const lang = useLocale(); // Fetch the current language
+
+  // Fetch error messages from the translations
+  const getErrorMessage = (error) => {
+    const errorCode = error.code || 'GENERIC_ERROR';
+    return t(`errors.${errorCode}`, { default: t('errors.GENERIC_ERROR') });
+  };
 
   const fieldErrors = state.errors?.fieldErrors || new Map();
+
   return (
     <div>
       {/* breadcrumb */}
-      {/*====================  breadcrumb area ====================*/}
       <div
         className='breadcrumb-area breadcrumb-bg'
         style={{
@@ -45,23 +29,21 @@ const Contact = () => {
           <div className='row'>
             <div className='col'>
               <div className='page-banner text-center'>
-                <h1>Հետադարձ կապ</h1>
+                <h1>{t('breadcrumb.contact')}</h1>
                 <ul className='page-breadcrumb'>
                   <li>
-                    <Link href='/'>Գլխավոր</Link>
+                    <Link href={`/${lang}`}>{t('breadcrumb.home')}</Link>
                   </li>
-                  <li>Հետադարձ կապ</li>
+                  <li>{t('breadcrumb.contact')}</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/*====================  End of breadcrumb area  ====================*/}
 
-      {/*====================  content page content ====================*/}
+      {/* Content page */}
       <div className='page-wrapper section-space--inner--120'>
-        {/*Contact section start*/}
         <div className='conact-section'>
           <div className='container'>
             <div className='row section-space--bottom--50'>
@@ -78,14 +60,14 @@ const Contact = () => {
             <div className='row'>
               <div className='col-lg-4 col-12'>
                 <div className='contact-information'>
-                  <h3>Կոնտակտային տվյալներ</h3>
+                  <h3>{t('contactDetails.title')}</h3>
                   <ul>
                     <li>
                       <span className='icon'>
                         <i className='ion-android-map' />
                       </span>
                       <span className='text'>
-                        <span>Վահրամ Փափազյան 8</span>
+                        <span>{t('contactDetails.address')}</span>
                       </span>
                     </li>
                     <li>
@@ -109,17 +91,22 @@ const Contact = () => {
               </div>
               <div className='col-lg-8 col-12'>
                 <div className='contact-form'>
-                  <h3>Թողեք Ձեր հաղորդագրությունը</h3>
+                  <h3>{t('contactDetails.leaveMessage')}</h3>
                   {state.succeeded ? (
                     <div>
-                      <p>Շնորհակալություն, Ձեզ հաղորդագրությունը հաջողությամբ ուղարկվեց!</p>
-                      <button onClick={reset}>Կրկին լրացնել</button>
+                      <p>{t('contactDetails.successMessage')}</p>
+                      <button onClick={reset}>{t('contactDetails.retryButton')}</button>
                     </div>
                   ) : (
                     <form id='contact-form' onSubmit={handleSubmit}>
                       <div className='row row-10'>
                         <div className='col-md-6 col-12 section-space--bottom--20'>
-                          <input id='name' name='name' type='text' placeholder='Ձեր անունը' />
+                          <input
+                            id='name'
+                            name='name'
+                            type='text'
+                            placeholder={t('contactDetails.placeholders.name')}
+                          />
                           {fieldErrors.has('name') && (
                             <div className='error-message'>
                               {fieldErrors.get('name').map((error, index) => (
@@ -133,7 +120,7 @@ const Contact = () => {
                             id='email'
                             name='email'
                             type='email'
-                            placeholder='Ձեր էլ. հասցեն'
+                            placeholder={t('contactDetails.placeholders.email')}
                           />
                           {fieldErrors.has('email') && (
                             <div className='error-message'>
@@ -147,8 +134,7 @@ const Contact = () => {
                           <textarea
                             id='message'
                             name='message'
-                            placeholder='Ձեր հաղորդագրությունը'
-                            defaultValue={''}
+                            placeholder={t('contactDetails.placeholders.message')}
                           />
                           {fieldErrors.has('message') && (
                             <div className='error-message'>
@@ -160,7 +146,7 @@ const Contact = () => {
                         </div>
                         <div className='col-12'>
                           <button id='send_message' type='submit' disabled={state.submitting}>
-                            Ուղարկել
+                            {t('contactDetails.submitButton')}
                           </button>
                         </div>
                       </div>
@@ -171,9 +157,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        {/*Contact section end*/}
       </div>
-      {/*====================  End of content page content  ====================*/}
     </div>
   );
 };
