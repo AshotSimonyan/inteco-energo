@@ -18,7 +18,6 @@ const Contact = () => {
 
   return (
     <div>
-      {/* breadcrumb */}
       <div
         className='breadcrumb-area breadcrumb-bg'
         style={{
