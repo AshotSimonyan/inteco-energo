@@ -81,35 +81,35 @@
       {
         "featureIcon": "feature-2.png",
         "featureTitle": "Quality",
-        "featureDescription": "We strive to deliver high-quality in all our services."
+        "featureDescription": "We strive to provide high quality in all of our provided services."
       },
       {
         "featureIcon": "feature-1.png",
         "featureTitle": "Reliability",
-        "featureDescription": "Customer trust is our top priority."
+        "featureDescription": "Customer trust is our priority."
       },
       {
         "featureIcon": "feature-3.png",
         "featureTitle": "Safety",
-        "featureDescription": "We ensure top-level safety in all our projects and services."
+        "featureDescription": "We ensure a high level of safety in all our projects and services."
       }
     ],
     "about": {
       "title": "Completed Projects",
       "projectList": [
-        "Renovation works on transformer and distribution substations",
-        "Cable construction works near the main avenue in Yerevan",
-        "Reconstruction of BE-120 substation located in Hrazdan Gorge, Yerevan",
-        "Reconstruction of the Gyumri 3 substation 110/35/10 kV",
-        "Cable laying works for the 6 kV line from Tsitsernakaberd ES to the city center, Yerevan",
-        "Reconstruction of the Kotayk substation 110/6 kV",
-        "Reconstruction of the Avan substation 110/6 kV",
-        "Reconstruction of the Aresh-2 substation 110/35/10 kV",
-        "Reconstruction of the Mashtots substation 110 kV",
-        "Reconstruction of electrical networks in the entrances of residential buildings",
-        "Installation of 6 kV cables for the new BE power supply line on Monte Melkonyan St. (left side) from the Tsitsernakaberd ES, Yerevan",
-        "Installation of 6 kV cables for the new BE power supply line on Monte Melkonyan St. (right side) and connection between left and right BE, Yerevan",
-        "Construction of a new distribution substation on the territory owned by Park Group LLC at Monte Melkonyan St. 31, Yerevan"
+        "Overhaul of transformer and distribution substations",
+        "Yerevan, cable construction next to the main avenue",
+        "Yerevan, reconstruction of BE-120 substation in Hrazdan gorge",
+        "Reconstruction of 110/35/10 kW Gyumri 3 substation",
+        "Yerevan, 6kW Cable laying from 110/6 kW Tsitsernakaberd substation to city center",
+        "Reconstruction of 110/6 kW Kotayk substation",
+        "Reconstruction of 110/6 kW Avan substation",
+        "Reconstruction of 110/35/10 kW Aresh-2 substation",
+        "Reconstruction of 110 kW Mashtots substation",
+        "Reconstruction of electric networks of multi-apartment buildings",
+        "Laying of new 6kW power supply cable lines for the newly built distribution substation on the left side of Monte Melkonyan street from 110/6kW Tsitsernakaberd substation in Yerevan",
+        "Laying of new 6kW connecting power supply cable lines for the newly built distribution substations on the left and the right sides of Monte Melkonyan street from 110/6kW Tsitsernakaberd substation in Yerevan",
+        "Construction of a new distribution substation on the area owned by Park Group LLC located on Monte Melkonyan 31, Yerevan"
       ]
     }
   },
@@ -122,14 +122,14 @@
     "sections": {
       "aboutUs": {
         "title": "About Us",
-        "content": "Inteco Energo CJSC was founded in March 2017 and is one of the largest construction companies in Armenia. We carry out diverse construction projects in residential, public, and energy sectors. Being a key contractor for the Armenian Electrical Networks, we have carried out large-scale construction, reconstruction, and modernization of energy infrastructure in Armenia and Artsakh."
+        "content": "Inteco Energo  CJSC was founded in March 2017 and is one of the largest construction companies operating in Armenia. We carry out various construction works in the residential, public and energy sector. For a long time, being one of the qualified contractors of the Armenian electric grid, we have carried out large-scale work on the construction, reconstruction and re-equipment of energy infrastructures in Armenia and Artsakh."
       },
       "mission": {
         "title": "Our Mission",
         "list": [
           {
             "strong": "Reliable Power Supply.",
-            "content": "We are committed to providing reliable and uninterrupted power supply to our clients."
+            "content": "We are committed to providing reliable and uninterrupted power supply to our customers."
           },
           {
             "strong": "Higher Stability.",
@@ -137,7 +137,7 @@
           },
           {
             "strong": "Reducing Energy Losses.",
-            "content": "We reduce energy losses by using the most advanced technologies."
+            "content": "We reduce energy losses using the most modern technologies."
           }
         ]
       }
@@ -179,18 +179,18 @@
     "serviceData": {
       "1": {
         "img": "service1.jpg",
-        "title": "Construction, Reconstruction, and Repair of Transmission Substations",
-        "description": "Electric networks and power supply are the basis for the industrial sector of telecommunications operators and service companies. Inteco Energo CJSC has earned a reputation in the market as a reliable partner and supplier of cutting-edge energy technologies through its systematic approach to the construction of high and low-voltage electrical networks, optical grounding wires, and transmission lines, as well as the supply and installation of transformer substations and alternative energy systems."
+        "title": "Construction, reconstruction and repair works of power transmission substations",
+        "description": "Power grids and power supply are the pillars of the industry for telecommunications operators and service companies. \"Inteco Energo\" CJSC has gained a reputation in the market as a reliable partner and a supplier of modern technologies for the electricity industry by providing a systematic approach to the construction of high and low voltage electrical networks, optical grounding wires and transmission lines, as well as by supplying and installing power transformer substations and alternative energy systems."
       },
       "2": {
         "img": "service2.jpg",
         "title": "Electrification",
-        "description": "The key characteristics of the power supply system are longevity, reliability, and safety. All electrical installation work is carried out according to high-quality standards, using cables and equipment from trusted and well-known manufacturers. The construction of substations and cable lines of 0.22 kV, 0.4 kV, 6 kV, 10 kV, 35 kV, and 110 kV is carried out."
+        "description": "Durability, reliability and safety are important characteristics of the power supply system. All electrical installation works are carried out in accordance with high quality standards, cables and equipment of reliable and well-known manufacturers are used. We carry out construction work of 0,22 kW, 0,4kW, 6 kW, 10kW, 35kW and 110 kW substations and cable lines."
       },
       "3": {
         "img": "service3.jpg",
-        "title": "Overhead and Underground Cable Works",
-        "description": "Throughout its many years of operation, the company has gained extensive experience in performing overhead and underground cable works. The company’s main advantage lies in its highly qualified, certified, and experienced engineers and specialists. The company offers a full range of services, including the design of general networks, power transmission and distribution lines, obtaining all necessary permits, licenses, project and planning documentation, supply of cables and materials, and installation work."
+        "title": "Aerial and underground cable work",
+        "description": "During long-term work, the Company has gained rich experience in aerial and underground cable work. The main advantage of the company is its highly qualified, certified, experienced engineers and specialists. The company provides a complete set of services: design of general networks, design of power transmission and distribution lines, all necessary permits, patents, design and planning documents, supply of cables and materials, installation works."
       }
     },
     "sidebar": {
